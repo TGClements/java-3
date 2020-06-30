@@ -181,9 +181,7 @@ class Numbers {
 
     static int append(int n) {
         //add a new value to the values list. return that value after adding it to the list.
-        // Stream<Integer> t = Stream.of(n);
 
-        // nums = Arrays.asList(Stream.concat(nums.stream(), t).toArray());
         Stream<Integer> myStream = nums.stream();
         Stream<Integer> myStream2 = Stream.concat(myStream, Stream.of(n));
 
