@@ -1,8 +1,114 @@
 package concurrency;
 
-class TeamTC1 {
+import java.util.*;
+
+class TeamTC1 implements Runnable {
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static final String ANSI_BRIGHT_BLACK = "\u001B[90m";
+    public static final String ANSI_BRIGHT_RED = "\u001B[91m";
+    public static final String ANSI_BRIGHT_GREEN = "\u001B[92m";
+    public static final String ANSI_BRIGHT_YELLOW = "\u001B[93m";
+    public static final String ANSI_BRIGHT_BLUE = "\u001B[94m";
+    public static final String ANSI_BRIGHT_PURPLE = "\u001B[95m";
 
     List<String> team = new ArrayList<>();
 
-    //This thread should be created by implementing the Runnable interface, NOT by extending the Thread class.  In the run method of this thread, print out the name of each student in your TA group, (starting with your TA).  There should be a pause of 1 second before each name is printed to the console.The name should then be pushed to the team List  After all the names have been pushed to this List, print out the entire list of all the students in your TA group. Don't forget your TA as well!  All of these steps should be done whenever the thread is started.  (i.e. it can be done directly in the run()method of the thread itself).  Kick off the thread in the Main class of the concurrency package.  
+    @Override
+    public void run() {
+        System.out.println(ANSI_BLACK + "Mark Bennett");
+        team.add("Mark Bennett");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_RED + "Aaron White");
+        team.add("Aaron White");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_GREEN + "Abram Jablonski");
+        team.add("Abram Jablonski");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_YELLOW + "Caleb Waters");
+        team.add("Caleb Waters");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_BLUE + "Cody Clark");
+        team.add("Cody Clark");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_PURPLE + "Gotham Katta");
+        team.add("Gotham Katta");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_CYAN + "John Bozarov");
+        team.add("John Bozarov");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_WHITE + "Justin Cheng");
+        team.add("Justin Cheng");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_BRIGHT_BLACK + "Kevin Keesee");
+        team.add("Kevin Keesee");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_BRIGHT_RED + "Korey Brooks");
+        team.add("Korey Brooks");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_BRIGHT_GREEN + "Matthew Choat");
+        team.add("Matthew Choat");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_BRIGHT_YELLOW + "Sarah");
+        team.add("Sarah");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_BRIGHT_BLUE + "Tyler G Clements");
+        team.add("Tyler G Clements");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+        System.out.println(ANSI_BRIGHT_PURPLE + "Zach");
+        team.add("Zach");
+        try {
+            Thread.sleep(1000);
+        } catch (Exception e) {
+        }
+
+        System.out.println(ANSI_RESET + team);
+    }
 }
