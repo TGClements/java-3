@@ -1,10 +1,15 @@
 package concurrency;
 
-class Reasoning {
-    //set up this class so it can become a valid thread. 
+class Reasoning implements Runnable {
+
     void distinguish() {
-        //print to the console the difference between a thread and a process
-        //print out you think will happen if you invoke the run() method of a thread as opposed to the start() method of a thread.
+        System.out.println("A process is an execution of a program, while a thread is an execution within a process.");
+        System.out.println(
+                "When you invoke start(), java creates a new thread to run the code in; when you invoke run(), java runs the code on the current thread and doesn't create a new one.");
+    }
+
+    @Override
+    public void run() {
+        distinguish();
     }
 }
-
